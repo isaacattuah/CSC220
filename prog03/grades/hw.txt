@@ -1,0 +1,82 @@
+Attuah		Login: iatt220        			Name: Isaac Attuah
+prog03.LinearFib@75828a0f
+0 0.0
+1 1.0
+2 1.0
+3 2.0
+4 3.0
+5 5.0
+6 8.0
+7 13.0
+8 21.0
+9 34.0
+10 55.0
+n1 20 time1 0.017804469650235095
+c 8.902234825117547E-4
+n2 30 estimated time 0.02670670447535264
+n2 30 actual time 0.010241123895536223
+n3 100 estimated time 0.08902234825117547
+UI 0:ExponentialFib
+UI 1:LinearFib
+UI 2:LogFib
+UI 3:ConstantFib
+UI 4:MysteryFib
+UI 5:EXIT
+UI command 0
+doExperiments prog03.ExponentialFib@3f0ee7cb
+UI 	Enter an integer: 
+UI 	? 
+UI  is not an integer.
+UI 	Enter an integer: 
+UI 	? abc
+UI abc is not an integer.
+UI 	Enter an integer: 
+UI 	? 10
+UI  n: 10
+ fib(10): 55.0
+ Running Time: 0.36968808061722563 microseconds  
+ Constant for O(): 0.0030057928420559603
+UI 	Enter an integer: 
+UI 	? 10
+UI Estimated time on new input is 0.36968808061722563 microseconds
+UI Actual time is 0.2768084321566464   Percentage error 33.553764145457265 %  
+UI  n: 10
+ fib(10): 55.0
+ Running Time: 0.2768084321566464 microseconds  
+ Constant for O(): 0.002250623830251811
+UI 	Enter an integer: 
+UI 	? 10
+UI Estimated time on new input is 0.2768084321566464 microseconds
+UI Actual time is 0.2834016789242998   Percentage error -2.3264670811687473 %  
+UI  n: 10
+ fib(10): 55.0
+ Running Time: 0.2834016789242998 microseconds  
+ Constant for O(): 0.002304231006082402
+UI 	Enter an integer: 
+UI 	? 20
+UI Estimated time on new input is 34.856102276682805 microseconds
+UI Actual time is 33.237280777903045   Percentage error 4.870499213208776 %  
+UI  n: 20
+ fib(20): 6765.0
+ Running Time: 33.237280777903045 microseconds  
+ Constant for O(): 0.00219721563582695
+UI 	Enter an integer: 
+UI 	? 30
+UI Estimated time on new input is 4087.915296023592 microseconds
+UI Actual time is 4018.3811646090535   Percentage error 1.7304015862642395 %  
+UI  n: 30
+ fib(30): 832040.0
+ Running Time: 4018.3811646090535 microseconds  
+ Constant for O(): 0.002159841700775927
+UI 	Enter an integer: 
+UI 	? 40
+UI Estimated time on new input is 494228.2113216489 microseconds
+UI Actual time is 490027.6035   Percentage error 0.8572186121039367 %  
+UI  n: 40
+ fib(40): 1.02334155E8
+ Running Time: 490027.6035 microseconds  
+ Constant for O(): 0.002141484497091538
+UI 	Enter an integer: 
+UI 	? null
+SCORE:  30/75
+Done:  EFG

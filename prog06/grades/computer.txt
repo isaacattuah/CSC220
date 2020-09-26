@@ -1,0 +1,18 @@
+Enter word file:
+UI words
+Starting Word: 
+UI fail
+Target Word: 
+UI pass
+0:Human plays. 1:Computer plays.
+UI 1
+ bail fain fair fall foil hail jail mail nail pail rail sail tail wail bait ball bawl boil faun fawn gain lain main pain rain vain hair lair pair call fell fill full gall hall mall pall tall wall coil foal fool foul fowl soil toil haul maid maim maul paid raid said wait gait bald bale balk balm bell bill boll bull bowl dawn lawn pawn yawn grin laid loin rein ruin vein heir calf calm cell cull dell feel felt hell sell tell well yell dill file film gill hill kill mill pill rill sill till will dull fuel gull hull lull mull null pull gale hale half halt male malt pale palm pals poll tale talk toll walk coal coin cool cowl foam goal food foot pool tool wool four soul howl sand skid slid waft want wart whit writ grit band bard baud bold babe bade bake bane bare base bile dale sale vale back bank bark bask bilk bulk belt bely bolt doll roll bulb burl bows damn darn down laws paws yarn grid grim grip land lard join loan loon veil hear cult curl deal feed fees feet heel keel peel reel feat melt pelt heal held helm help seal self weld yelp dial fife fine fire five mile pile tile vile wile firm gild gilt girl hilt mild milk silk silo silt tilt wild wilt wily dual duel duly gulf gulp hurl mule pulp game gape gate gave gaze hare hate have haze hole hart salt mace made make mane mare mate maze mole mart mast pace page pane pare pate pave pole pads pans pars passGo to pass from pals
+
+fail
+fall
+pall
+pals
+pass
+pass
+
+SCORE 25/25

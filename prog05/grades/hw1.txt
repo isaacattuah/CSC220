@@ -1,0 +1,56 @@
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+How many disks?
+UI 3
+0:Human plays. 1:Computer plays.
+UI 0
+a 3  2  1 
+b
+c
+0:ab 1:ac 2:ba 3:bc 4:ca 5:cb
+UI 2
+You cannot remove from an empty peg
+a 3  2  1 
+b
+c
+0:ab 1:ac 2:ba 3:bc 4:ca 5:cb
+UI 1
+a 3  2 
+b
+c 1 
+0:ab 1:ac 2:ba 3:bc 4:ca 5:cb
+UI 1
+You cannot move  2 to 1
+a 3  2 
+b
+c 1 
+0:ab 1:ac 2:ba 3:bc 4:ca 5:cb
+UI 0
+a 3 
+b 2 
+c 1 
+0:ab 1:ac 2:ba 3:bc 4:ca 5:cb
+UI 5
+a 3 
+b 2  1 
+c
+0:ab 1:ac 2:ba 3:bc 4:ca 5:cb
+UI 1
+a
+b 2  1 
+c 3 
+0:ab 1:ac 2:ba 3:bc 4:ca 5:cb
+UI 2
+a 1 
+b 2 
+c 3 
+0:ab 1:ac 2:ba 3:bc 4:ca 5:cb
+UI 3
+a 1 
+b
+c 3  2 
+0:ab 1:ac 2:ba 3:bc 4:ca 5:cb
+UI 1
+You win!
+
+SCORE: 40/40

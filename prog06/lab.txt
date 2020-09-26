@@ -1,0 +1,100 @@
+-1. Go to box.miami.edu and make sure you see the version of prog05
+   you meant to turn in this morning.  If not, send email to
+   vjm@cs.miami.edu right away.
+
+0. Create package prog06 and copy MaintainQueue.java into it.
+
+1. Run MaintainQueue and make sure you know how it works.  It won't
+   print the list of names in the queue until you implement toString
+   in the next step.  Add a few people, peek, remove, etc.  What
+   happens when you remove from an empty queue?  poll?  peek?  element?
+
+2. Implement toString in MaintainQueue.  Visit the elements of
+   customers using the new kind of for loop and append them to a
+   single String separated by spaces.  Test.
+
+3. In ArrayQueue.java, read and understand offer and peek.
+   "Understand" means that you are ready to write either of them on
+   the quiz tomorrow!  Implement poll.  Test using MaintainQueue.
+   Read and understand the definition of the Iter class.
+
+4. In LinkedQueue.java, read and understand offer and peek.  Implement
+   poll.  Implement hasNext() and next() in the Iter class. Unlike
+   ArrayQueue.Iter, it needs only one variable to keep track of the
+   next node to be visited.  Test using MaintainQueue.
+
+5. Create a class WordStep with a variable
+
+  static UserInterface ui = new GUI();
+
+   and a main method.  In the main method, create a new WordStep and
+   store it in a variable named game.  Using ui, ask the user for a
+   starting word and a target word.  Ask if the human or the computer
+   should play using
+
+    String[] commands = { "Human plays.", "Computer plays." };
+
+   Call game.play or game.solve with the starting word and the target
+   word.  Create empty methods so this compiles and runs.
+
+  void play (String start, String target) { }
+  void solve (String start, String target) { }
+
+   Inside play, do the following forever (until the return occurs).
+   Tell the user the current word (the start) and the target word.
+   Ask for the next word.  Set the start word variable to that next
+   word.  If it equals the target, tell the user ``You win!'' and
+   return.  Otherwise keep looping.  Test.  (Also deal with cancel.)
+
+HOMEWORK
+
+6. In WordStep, create a static boolean method offBy1 which takes two
+   String variables as input and returns true if they have the same
+   length and differ in exactly one character.
+
+   Modify play so that it uses offBy1.  If the word that the user
+   suggests is not one letter away from the current start word, warn
+   the user and DO NOT change the current (start) word variable.
+   Test.  You still will be able to use nonsense words like "snon".
+
+7. In main, just after creating the new WordStep, ask the user for the
+   name of a word file and call game.loadWords(filename).  Add a
+   List<String> words to WordStep initialized to an ArrayList<String>,
+   and write loadWords that adds all the words in the file to the
+   list.
+
+   Write a find method that finds a word in words.  It should return
+   the index of the word or -1 if it is not there.  Modify main to
+   check that the start and target words are in the list.  Test using
+   the file called words (not words.txt by the way) in the prog06
+   directory.
+
+8. Modify reallocate() in ArrayQueue to use System.arraycopy.
+   Sometimes it has to call it twice.  Test.  Make sure you add enough
+   entries when you run MaintainQueue to trigger reallocate().  To
+   test set labReallocate to false.  Make sure you do tests with
+   first < last    and with   first > last.
+
+9. Modify ArrayQueue.Iter to using a single index variable and no
+   count variable.  If the queue is empty, then the constructor should
+   set index=-1.  If index==last, then next() should set index=-1.
+   Test by setting labIterator to false.
+
+10. Now to implement WordStep.solve.
+
+   Create an array of int called parents whose length is the same as
+   the word list.  Initialize all the entries in parents to -1.
+
+   Create a Queue of Integer.  Put the index of the start word into
+   the queue.
+
+   While the queue is not empty, remove an index.  Call the word at
+   the index the current word.  Go through the list of words and look
+   for words which aren't the start word, don't have parents set yet,
+   and are one letter different from current word.  For each one you
+   find, put its index into the queue and set parents at that index to
+   the index of the current word.
+
+   Also check if the word is the target.  If it is report success.  To
+   get the solution in reverse order, follow the indices in parents
+   the start word.  Display the solution in forward order.  Return.

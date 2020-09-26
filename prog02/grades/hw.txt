@@ -1,0 +1,82 @@
+Attuah		Login: iatt220        			Name: Isaac Attuah
+A:a,B:b,C:c,D:d,null,null size = 4
+Calling remove(0)
+returned A:a
+B:b,C:c,D:d,D:d,null,null size = 3
+SUCCESS
+A:a,null,null,null,null,null size = 1
+Calling remove(0)
+returned A:a
+A:a,null,null,null,null,null size = 0
+SUCCESS
+A:a,B:b,C:c,D:d,E:e,null size = 5
+Calling remove(2)
+returned C:c
+A:a,B:b,D:d,E:e,E:e,null size = 4
+SUCCESS
+A:a,B:b,C:c,D:d,E:e,F:f size = 6
+Calling remove(5)
+returned F:f
+A:a,B:b,C:c,D:d,E:e,F:f size = 5
+SUCCESS
+A:a,B:b,C:c,D:d,E:e,null size = 5
+Calling add(0, X, x)
+returned X:x
+X:x,A:a,B:b,C:c,D:d,E:e size = 6
+SUCCESS
+A:a,B:b,C:c,D:d,E:e,null size = 5
+Calling add(2, X, x)
+returned X:x
+A:a,B:b,X:x,C:c,D:d,E:e size = 6
+SUCCESS
+A:a,B:b,C:c,D:d,E:e,null size = 5
+Calling add(5, X, x)
+returned X:x
+A:a,B:b,C:c,D:d,E:e,X:x size = 6
+SUCCESS
+A:a,B:b,C:c,D:d,E:e,F:f size = 6
+Calling add(0, X, x)
+returned X:x
+X:x,A:a,B:b,C:c,D:d,E:e,F:f,null,null,null,null,null size = 7
+SUCCESS
+B:b,D:d,F:f,H:h,J:j,L:l size = 5
+find(C)
+returned -2
+SUCCESS
+B:b,D:d,F:f,H:h,J:j,L:l size = 0
+find(A)
+returned -1
+SUCCESS
+B:b,D:d,F:f,H:h,J:j,L:l size = 1
+find(A)
+returned -1
+SUCCESS
+B:b,D:d,F:f,H:h,J:j,L:l size = 1
+find(B)
+returned 0
+SUCCESS
+B:b,D:d,F:f,H:h,J:j,L:l size = 1
+find(C)
+returned -2
+SUCCESS
+B:b,D:d,F:f,H:h,J:j,L:l size = 2
+find(A)
+returned -1
+SUCCESS
+B:b,D:d,F:f,H:h,J:j,L:l size = 2
+find(B)
+returned 0
+SUCCESS
+B:b,D:d,F:f,H:h,J:j,L:l size = 2
+find(C)
+returned -2
+SUCCESS
+B:b,D:d,F:f,H:h,J:j,L:l size = 2
+find(D)
+returned 1
+SUCCESS
+B:b,D:d,F:f,H:h,J:j,L:l size = 2
+find(E)
+returned -3
+SUCCESS
+SCORE: 60

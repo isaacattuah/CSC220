@@ -1,0 +1,160 @@
+The other way to order a tree is heap order.  That is no good for
+searching, but it is useful for implementing a PRIORITY QUEUE for
+which poll() returns and removes the LEAST element.
+
+For a heap, we can use an array implementation, which means that the
+tree should always be COMPLETE.
+
+
+offer(key)
+	put the element in the first available location
+	while it is less than its parent
+		swap it with its parent
+
+offer(3)
+
+	               3
+	       .               .
+	   .       .       .       .
+	 .   .   .   .   .   .   .   .
+
+offer(1)
+
+	               3
+	       1               .
+	   .       .       .       .
+	 .   .   .   .   .   .   .   .
+
+	               1
+	       3               .
+	   .       .       .       .
+	 .   .   .   .   .   .   .   .
+
+offer(4)
+
+	               1
+	       3               4
+	   .       .       .       .
+	 .   .   .   .   .   .   .   .
+
+offer(1)
+
+	               1
+	       3               4
+	   1       .       .       .
+	 .   .   .   .   .   .   .   .
+
+	               1
+	       1               4
+	   3       .       .       .
+	 .   .   .   .   .   .   .   .
+
+offer(5)
+	               1
+	       1               4
+	   3       5       .       .
+	 .   .   .   .   .   .   .   .
+
+offer(9)
+
+	               1
+	       1               4
+	   3       5       9       .
+	 .   .   .   .   .   .   .   .
+
+
+offer(2)
+	               1
+	       1               4
+	   3       5       9       2
+	 .   .   .   .   .   .   .   .
+
+	               1
+	       1               2
+	   3       5       9       4
+	 .   .   .   .   .   .   .   .
+
+offer(6)
+
+	               1
+	       1               2
+	   3       5       9       4
+	 6   .   .   .   .   .   .   .
+
+
+poll()
+	replace the root element with the last element
+	while that element is greater than one of its children
+		swap it with the smaller child
+        return the original root element
+
+poll() returns 1
+
+	               6
+	       1               2
+	   3       5       9       4
+	 .   .   .   .   .   .   .   .
+
+	               1
+	       6               2
+	   3       5       9       4
+	 .   .   .   .   .   .   .   .
+
+	               1
+	       3               2
+	   6       5       9       4
+	 .   .   .   .   .   .   .   .
+
+poll() returns 1
+
+	               4
+	       3               2
+	   6       5       9       .
+	 .   .   .   .   .   .   .   .
+
+	               2
+	       3               4
+	   6       5       9       .
+	 .   .   .   .   .   .   .   .
+
+poll() returns 2
+
+	               9
+	       3               4
+	   6       5       .       .
+	 .   .   .   .   .   .   .   .
+
+	               3
+	       9               4
+	   6       5       .       .
+	 .   .   .   .   .   .   .   .
+
+	               3
+	       5               4
+	   6       9       .       .
+	 .   .   .   .   .   .   .   .
+
+poll() returns 3
+
+	               9
+	       5               4
+	   6       .       .       .
+	 .   .   .   .   .   .   .   .
+
+	               4
+	       5               9
+	   6       .       .       .
+	 .   .   .   .   .   .   .   .
+
+poll() returns 4
+
+	               6
+	       5               9
+	   .       .       .       .
+	 .   .   .   .   .   .   .   .
+
+	               5
+	       6               9
+	   .       .       .       .
+	 .   .   .   .   .   .   .   .
+

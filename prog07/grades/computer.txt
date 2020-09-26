@@ -1,0 +1,25 @@
+Enter word file:
+UI words
+Starting Word: 
+UI snow
+Target Word: 
+UI rain
+0:Human plays. 1:Computer plays.
+UI 1
+ know scow show slow snob stow knew knob knot stew stop blow flow glow plow slew slob slop slot snub shod shoe shop shot snug stub shit shut soot spot skew stem step knit blew blob bloc blot brow unit chop ship flaw flew flog flop chip shin skip slip snip whip chit skit slit spit suit whit atop chin shun skin spin thin grow plod plot ploy prow clot slat slit anew knee sled slab flit slid slim slap slip shed blip clip flip seed sped sued flap than then this twin whim whiz boot seep stab stud stun skid skim skis spun spat snap slug smug snag chat chic brew crow atom flap shun smut quit coin foot hoot loot moot root soft soon sort akin wait what writ riot roof rook room rout boon coon loon noon sown bait gait waft wail want wart span clod prod item seem play said blab boob laid maid paid raid sail sand bled rail rainsnow and rain differ by 6 steps
+
+Your program polled 74 words
+
+Go to snow from rain
+
+snow
+slow
+slot
+slit
+slid
+said
+raid
+rain
+rain
+
+SCORE 25/25

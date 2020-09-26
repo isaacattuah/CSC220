@@ -1,0 +1,417 @@
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+How many disks?
+UI 5
+0:Human plays. 1:Computer plays.
+UI 1
+Move 5 disk(s) from a to c.
+
+
+Move 4 disk(s) from a to b.
+Move 1 disk(s) from a to c.
+Move 4 disk(s) from b to c.
+
+
+Move 3 disk(s) from a to c.
+Move 1 disk(s) from a to b.
+Move 3 disk(s) from c to b.
+Move 1 disk(s) from a to c.
+Move 4 disk(s) from b to c.
+
+
+Move 2 disk(s) from a to b.
+Move 1 disk(s) from a to c.
+Move 2 disk(s) from b to c.
+Move 1 disk(s) from a to b.
+Move 3 disk(s) from c to b.
+Move 1 disk(s) from a to c.
+Move 4 disk(s) from b to c.
+
+
+Move 1 disk(s) from a to c.
+Move 1 disk(s) from a to b.
+Move 1 disk(s) from c to b.
+Move 1 disk(s) from a to c.
+Move 2 disk(s) from b to c.
+Move 1 disk(s) from a to b.
+Move 3 disk(s) from c to b.
+Move 1 disk(s) from a to c.
+Move 4 disk(s) from b to c.
+
+
+a 5  4  3  2 
+b
+c 1 
+
+Move 1 disk(s) from a to b.
+Move 1 disk(s) from c to b.
+Move 1 disk(s) from a to c.
+Move 2 disk(s) from b to c.
+Move 1 disk(s) from a to b.
+Move 3 disk(s) from c to b.
+Move 1 disk(s) from a to c.
+Move 4 disk(s) from b to c.
+
+
+a 5  4  3 
+b 2 
+c 1 
+
+Move 1 disk(s) from c to b.
+Move 1 disk(s) from a to c.
+Move 2 disk(s) from b to c.
+Move 1 disk(s) from a to b.
+Move 3 disk(s) from c to b.
+Move 1 disk(s) from a to c.
+Move 4 disk(s) from b to c.
+
+
+a 5  4  3 
+b 2  1 
+c
+
+Move 1 disk(s) from a to c.
+Move 2 disk(s) from b to c.
+Move 1 disk(s) from a to b.
+Move 3 disk(s) from c to b.
+Move 1 disk(s) from a to c.
+Move 4 disk(s) from b to c.
+
+
+a 5  4 
+b 2  1 
+c 3 
+
+Move 2 disk(s) from b to c.
+Move 1 disk(s) from a to b.
+Move 3 disk(s) from c to b.
+Move 1 disk(s) from a to c.
+Move 4 disk(s) from b to c.
+
+
+Move 1 disk(s) from b to a.
+Move 1 disk(s) from b to c.
+Move 1 disk(s) from a to c.
+Move 1 disk(s) from a to b.
+Move 3 disk(s) from c to b.
+Move 1 disk(s) from a to c.
+Move 4 disk(s) from b to c.
+
+
+a 5  4  1 
+b 2 
+c 3 
+
+Move 1 disk(s) from b to c.
+Move 1 disk(s) from a to c.
+Move 1 disk(s) from a to b.
+Move 3 disk(s) from c to b.
+Move 1 disk(s) from a to c.
+Move 4 disk(s) from b to c.
+
+
+a 5  4  1 
+b
+c 3  2 
+
+Move 1 disk(s) from a to c.
+Move 1 disk(s) from a to b.
+Move 3 disk(s) from c to b.
+Move 1 disk(s) from a to c.
+Move 4 disk(s) from b to c.
+
+
+a 5  4 
+b
+c 3  2  1 
+
+Move 1 disk(s) from a to b.
+Move 3 disk(s) from c to b.
+Move 1 disk(s) from a to c.
+Move 4 disk(s) from b to c.
+
+
+a 5 
+b 4 
+c 3  2  1 
+
+Move 3 disk(s) from c to b.
+Move 1 disk(s) from a to c.
+Move 4 disk(s) from b to c.
+
+
+Move 2 disk(s) from c to a.
+Move 1 disk(s) from c to b.
+Move 2 disk(s) from a to b.
+Move 1 disk(s) from a to c.
+Move 4 disk(s) from b to c.
+
+
+Move 1 disk(s) from c to b.
+Move 1 disk(s) from c to a.
+Move 1 disk(s) from b to a.
+Move 1 disk(s) from c to b.
+Move 2 disk(s) from a to b.
+Move 1 disk(s) from a to c.
+Move 4 disk(s) from b to c.
+
+
+a 5 
+b 4  1 
+c 3  2 
+
+Move 1 disk(s) from c to a.
+Move 1 disk(s) from b to a.
+Move 1 disk(s) from c to b.
+Move 2 disk(s) from a to b.
+Move 1 disk(s) from a to c.
+Move 4 disk(s) from b to c.
+
+
+a 5  2 
+b 4  1 
+c 3 
+
+Move 1 disk(s) from b to a.
+Move 1 disk(s) from c to b.
+Move 2 disk(s) from a to b.
+Move 1 disk(s) from a to c.
+Move 4 disk(s) from b to c.
+
+
+a 5  2  1 
+b 4 
+c 3 
+
+Move 1 disk(s) from c to b.
+Move 2 disk(s) from a to b.
+Move 1 disk(s) from a to c.
+Move 4 disk(s) from b to c.
+
+
+a 5  2  1 
+b 4  3 
+c
+
+Move 2 disk(s) from a to b.
+Move 1 disk(s) from a to c.
+Move 4 disk(s) from b to c.
+
+
+Move 1 disk(s) from a to c.
+Move 1 disk(s) from a to b.
+Move 1 disk(s) from c to b.
+Move 1 disk(s) from a to c.
+Move 4 disk(s) from b to c.
+
+
+a 5  2 
+b 4  3 
+c 1 
+
+Move 1 disk(s) from a to b.
+Move 1 disk(s) from c to b.
+Move 1 disk(s) from a to c.
+Move 4 disk(s) from b to c.
+
+
+a 5 
+b 4  3  2 
+c 1 
+
+Move 1 disk(s) from c to b.
+Move 1 disk(s) from a to c.
+Move 4 disk(s) from b to c.
+
+
+a 5 
+b 4  3  2  1 
+c
+
+Move 1 disk(s) from a to c.
+Move 4 disk(s) from b to c.
+
+
+a
+b 4  3  2  1 
+c 5 
+
+Move 4 disk(s) from b to c.
+
+
+Move 3 disk(s) from b to a.
+Move 1 disk(s) from b to c.
+Move 3 disk(s) from a to c.
+
+
+Move 2 disk(s) from b to c.
+Move 1 disk(s) from b to a.
+Move 2 disk(s) from c to a.
+Move 1 disk(s) from b to c.
+Move 3 disk(s) from a to c.
+
+
+Move 1 disk(s) from b to a.
+Move 1 disk(s) from b to c.
+Move 1 disk(s) from a to c.
+Move 1 disk(s) from b to a.
+Move 2 disk(s) from c to a.
+Move 1 disk(s) from b to c.
+Move 3 disk(s) from a to c.
+
+
+a 1 
+b 4  3  2 
+c 5 
+
+Move 1 disk(s) from b to c.
+Move 1 disk(s) from a to c.
+Move 1 disk(s) from b to a.
+Move 2 disk(s) from c to a.
+Move 1 disk(s) from b to c.
+Move 3 disk(s) from a to c.
+
+
+a 1 
+b 4  3 
+c 5  2 
+
+Move 1 disk(s) from a to c.
+Move 1 disk(s) from b to a.
+Move 2 disk(s) from c to a.
+Move 1 disk(s) from b to c.
+Move 3 disk(s) from a to c.
+
+
+a
+b 4  3 
+c 5  2  1 
+
+Move 1 disk(s) from b to a.
+Move 2 disk(s) from c to a.
+Move 1 disk(s) from b to c.
+Move 3 disk(s) from a to c.
+
+
+a 3 
+b 4 
+c 5  2  1 
+
+Move 2 disk(s) from c to a.
+Move 1 disk(s) from b to c.
+Move 3 disk(s) from a to c.
+
+
+Move 1 disk(s) from c to b.
+Move 1 disk(s) from c to a.
+Move 1 disk(s) from b to a.
+Move 1 disk(s) from b to c.
+Move 3 disk(s) from a to c.
+
+
+a 3 
+b 4  1 
+c 5  2 
+
+Move 1 disk(s) from c to a.
+Move 1 disk(s) from b to a.
+Move 1 disk(s) from b to c.
+Move 3 disk(s) from a to c.
+
+
+a 3  2 
+b 4  1 
+c 5 
+
+Move 1 disk(s) from b to a.
+Move 1 disk(s) from b to c.
+Move 3 disk(s) from a to c.
+
+
+a 3  2  1 
+b 4 
+c 5 
+
+Move 1 disk(s) from b to c.
+Move 3 disk(s) from a to c.
+
+
+a 3  2  1 
+b
+c 5  4 
+
+Move 3 disk(s) from a to c.
+
+
+Move 2 disk(s) from a to b.
+Move 1 disk(s) from a to c.
+Move 2 disk(s) from b to c.
+
+
+Move 1 disk(s) from a to c.
+Move 1 disk(s) from a to b.
+Move 1 disk(s) from c to b.
+Move 1 disk(s) from a to c.
+Move 2 disk(s) from b to c.
+
+
+a 3  2 
+b
+c 5  4  1 
+
+Move 1 disk(s) from a to b.
+Move 1 disk(s) from c to b.
+Move 1 disk(s) from a to c.
+Move 2 disk(s) from b to c.
+
+
+a 3 
+b 2 
+c 5  4  1 
+
+Move 1 disk(s) from c to b.
+Move 1 disk(s) from a to c.
+Move 2 disk(s) from b to c.
+
+
+a 3 
+b 2  1 
+c 5  4 
+
+Move 1 disk(s) from a to c.
+Move 2 disk(s) from b to c.
+
+
+a
+b 2  1 
+c 5  4  3 
+
+Move 2 disk(s) from b to c.
+
+
+Move 1 disk(s) from b to a.
+Move 1 disk(s) from b to c.
+Move 1 disk(s) from a to c.
+
+
+a 1 
+b 2 
+c 5  4  3 
+
+Move 1 disk(s) from b to c.
+Move 1 disk(s) from a to c.
+
+
+a 1 
+b
+c 5  4  3  2 
+
+Move 1 disk(s) from a to c.
+
+
+a
+b
+c 5  4  3  2  1 
+
+
+SCORE: 30/30

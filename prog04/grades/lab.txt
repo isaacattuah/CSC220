@@ -1,0 +1,60 @@
+Attuah		Login: iatt220        			Name: Isaac Attuah
+Saving list:
+Vic:314 Zoe:412 Bob:625 tail=Bob:625
+Output file:
+Vic
+314
+Zoe
+412
+Bob
+625
+Saving list:
+tail=null
+Output file:
+CORRECT
+List is:
+Vic:314 Zoe:412 tail=Zoe:412
+Adding Bob:625
+List is:
+Vic:314 Zoe:412 Bob:625 tail=Bob:625
+List is:
+tail=null
+Adding Vic:314
+List is:
+Vic:314 tail=Vic:314
+List is:
+Vic:314 tail=Vic:314
+Adding Zoe:412
+List is:
+Vic:314 Zoe:412 tail=Zoe:412
+CORRECT
+List is:
+Vic:314 Zoe:412 Bob:625 tail=Bob:625
+Finding Vic
+find(Vic) returns Vic:314
+List is:
+Vic:314 Zoe:412 Bob:625 tail=Bob:625
+Finding Zoe
+find(Zoe) returns Zoe:412
+List is:
+Vic:314 Zoe:412 Bob:625 tail=Bob:625
+Finding Bob
+find(Bob) returns Bob:625
+List is:
+Vic:314 Zoe:412 Bob:625 tail=Bob:625
+Finding Ian
+find(Ian) returns null
+List is:
+Vic:314 tail=Vic:314
+Finding Vic
+find(Vic) returns Vic:314
+List is:
+Vic:314 tail=Vic:314
+Finding Zoe
+find(Zoe) returns null
+List is:
+tail=null
+Finding Vic
+find(Vic) returns null
+CORRECT
+SCORE: 30/30

@@ -1,0 +1,12 @@
+Note: ./prog07/Heap.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+format is test: CORRECT ANSWER ? YOUR ANSWER
+Exception in thread "main" java.lang.IndexOutOfBoundsException: Index 0 out-of-bounds for length 0
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
+	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:248)
+	at java.base/java.util.Objects.checkIndex(Objects.java:372)
+	at java.base/java.util.ArrayList.set(ArrayList.java:454)
+	at prog07.Heap.remove(Heap.java:184)
+	at prog07.TestHeap.main(TestHeap.java:28)
+SCORE 15/25

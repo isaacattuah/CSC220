@@ -1,0 +1,42 @@
+Checking for arraycopy
+    	System.arraycopy(theItems,first, newItems,0,size-first);
+    	System.arraycopy(theItems, 0, newItems, size - first, first);
+test: Testing ArrayQueue
+both labReallocate and labIterator will be set to true
+format is test: op() = CORRECT ANSWER , YOUR ANSWER
+right: toString() = [] ? []
+right: peek() = null ? null
+right: poll() = null ? null
+right: toString() = [5, 6, 7, 8, 9, 10, 11, 12, 13, 14] ? [5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+right: toString() = [24] ? [24]
+right: peek() = 24 ? 24
+right: poll() = 24 ? 24
+right: peek() = null ? null
+right: poll() = null ? null
+right: toString() = [] ? []
+
+test: Testing LinkedQueue
+both labReallocate and labIterator should be set to true
+format is test: op() = CORRECT ANSWER , YOUR ANSWER
+right: toString() = [] ? []
+right: peek() = null ? null
+right: poll() = null ? null
+right: toString() = [5, 6, 7, 8, 9, 10, 11, 12, 13, 14] ? [5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+right: toString() = [24] ? [24]
+right: peek() = 24 ? 24
+right: poll() = 24 ? 24
+right: peek() = null ? null
+right: poll() = null ? null
+right: toString() = [] ? []
+
+test: Testing ArrayQueue
+labIterator will be set to false
+format is test: CORRECT ANSWER ? YOUR ANSWER
+right: [5, 6, 7, 8, 9, 10, 11, 12, 13, 14]? [5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+right: [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]? [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+test: Testing ArrayQueue
+labReallocate will be set to false
+format is test: CORRECT ANSWER ? YOUR ANSWER
+right: [5, 6, 7, 8, 9, 10, 11, 12, 13, 14]? [5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+right: [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]? [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+SCORE 25/25

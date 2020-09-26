@@ -1,0 +1,20 @@
+Ignore warnings about unchecked operations. Look for errors.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+
+ArrayStack
+
+
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+
+LinkedStack
+
+
+Note: StackTest3.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+
+ListStack
+
+
+SCORE: 30/30

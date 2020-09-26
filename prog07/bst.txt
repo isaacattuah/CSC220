@@ -1,0 +1,118 @@
+A binary search tree is ordered so that everything in the left subtree
+of each node has lesser key that that node and everything in the right
+subtree has greater key.  This enables to find the node with a given
+key quickly.
+
+find(key, root):  find the node with key in the tree rooted at root
+	tree is empty?  return null
+	key is at root?  return root
+	key < root key?  recursively find in left subtree
+	key > root key?  recursively find in right subtree
+
+Node find (K key, Node root) {
+	if (root == null)
+		return null;
+        if (key.compareTo(root.key) == 0)
+		return root;
+        if (key.compareTo(root.key) < 0)
+		return find(key, root.left);
+	else
+		return find(key, root.right);
+
+
+	               3
+	       1               5
+	           2       4       9
+
+Let's say you are looking for key==4.  Root has key==3.
+Root is not null.
+key is not less than root key.
+So recursively look in right tree, rooted at key==5.
+
+If you believe in recursion, we are done.  But maybe you are not sure, so...
+
+	Root has key==5.
+	Root is not null.
+	key is less than root key.
+	So recursively look in left tree, rooted at key==4.
+
+		Root has key==4.
+		Root is not null.
+		key equals root key.
+		Return node with key==4.
+
+	Return node with key==4.
+
+Return node with key==4.
+
+
+add(K key, V value, Node root)
+	tree is empty?  return new Node with key and value
+	key < root key?  recursively add to left subtree
+			 and replace current left subtree with result
+			 and return root
+	key > root key?  recursively add to right subtree
+			 and replace current right subtree with result
+			 and return root
+
+Why return root?  Well suppose the input key==6 and root is the node
+with key==3.  (Let's not worry about values.)
+
+	               3
+	       1               5
+	           2       4       9
+
+This is the result.  Well, what is the root of this tree?  The node
+with key==3, right?  So that is what you should return.
+
+	               3
+	       1               5
+	           2       4       9
+	                         6
+
+Removing a node is the trickiest.  Suppose we wanted to remove the 3.
+That would split the tree into two.
+
+	                
+	       1               5
+	           2       4       9
+	                         6
+
+
+The fix is to replace it by the rightmost node in the left subtree or
+the leftmost node in the right subtree:
+
+	               2
+	       1               5
+	                   4       9
+	                         6
+
+OR
+
+	               4 
+	       1               5
+	           2               9
+	                         6
+
+Node remove(key, root)
+	key == root.key? return removeRoot(root)
+	key < root.key? recursive call on left tree
+	key > root.key? recursive call on right tree
+
+Node removeRoot(root)
+	left subtree is empty?  return right subtree
+	right subtree is empty?  return left subtree
+        Use getMininum to get the minimum (leftmost) node in the right subtree.
+        That will be the new root.
+        Use removeMinimum to remove the minimum node from the right subtree.
+        Copy the left and right subtree of root to the new root.
+        Return the new root.
+
+Node getMinimum(root)
+	left subtree is empty?  return root
+        Use getMinimum to get the minimum in the left subtree and return it.
+
+Node removeMinimum(root)
+	left subtree is empty?  return right subtree
+        Remove the minimum of the left subtree.
+        Return root.

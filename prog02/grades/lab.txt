@@ -1,0 +1,87 @@
+Attuah		Login: iatt220        			Name: Isaac Attuah
+Cases 0-3 should each have exactly one call to pd.
+-3 if it has an extra call.
+-10 if it has no call.
+
+		pd.loadData(fn);
+			case -1:
+			case 0:
+				oldNumber = pd.addOrChangeEntry(name, number); 
+			case 1:
+				number = pd.lookupEntry(name);
+			case 2:
+                number = pd.lookupEntry(name);
+                pd.removeEntry(name);
+			case 3:
+				pd.save();
+			case 4:
+
+	case 1:
+	Enter the name 
+	? Fred
+Fred is not in the directory 
+	case 1:
+	Enter the name 
+	? Victor
+Victor has number vjm@cs.miami.edu
+	case 2:
+	Enter the name 
+	? Victor
+	case 2:
+	Enter the name 
+	? Victor
+	case 0:
+	Enter the name 
+	? Victor
+	Enter the number
+	? 
+Victor was added to the directory
+ New Number: 
+	case 0:
+	Enter the name 
+	? Fred
+	Enter the number
+	? fred
+Fred was added to the directory
+ New Number: fred
+	case 0:
+	Enter the name 
+	? Fred
+	Enter the number
+	? 777
+Fred was added to the directory
+ Old Number: fred 
+ New Number: 777
+	case 0:
+	Enter the name 
+	? Victor
+	Enter the number
+	? null
+Victor was added to the directory
+ Old Number:  
+ New Number: 
+	case 1:
+	Enter the name 
+	? null
+	case 1:
+	Enter the name 
+	? 
+	case 2:
+	Enter the name 
+	? null
+	case 2:
+	Enter the name 
+	? 
+	case 0:
+	Enter the name 
+	? null
+	case 0:
+	Enter the name 
+	? 
+	case 3:
+	case 4:
+-3 points if your program does not have the old and new number for Fred.
+-10 points if your program crashes when the user clicks CANCEL.
+
+SCORE:  37/40
+

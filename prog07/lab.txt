@@ -1,0 +1,182 @@
+0. Create package prog07 and add Heap.java.
+
+
+1. In Heap, go over all the methods up to and including offer.  Make
+   sure you understand them.  Implement poll().  It uses ITERATION.
+
+For the final loop, what's the condition on the while?
+
+	The item at index is greater than one of its children.
+
+How do you say this in Java:
+
+	(The item at) index is greater than its left child or
+        index is greater than its right child
+
+More specifically
+
+	index has a left child and is greater than that child
+	or
+	index has a right child and is greater than that child
+
+Once you have this condition, then you need to do the inside of the loop:
+
+	swap index with the smaller child
+
+More specifically
+
+	if right child is less than left child
+	then swap index with right
+	else swap index with left
+
+Can you get the logic right?  Remember, the parent might not HAVE a
+right child.  Who wins then?  Make sure the if condition handles this case.
+
+
+DUE Wednesday March 6 at 11am
+
+8. Copy your WordStep.java from prog06 to prog07 and change the
+   package of the copy to prog07 at the top.
+
+
+9. Add code to solve so it displays a message about how many times it
+   polls the queue.  (Poll is expensive because you have the check the
+   entire dictionary for neighbors.)  You should get 481 for "snow" to
+   "rain".
+
+
+10. Add a method
+
+	static int numSteps (int[] parents, int index)
+
+   that takes the parents array and an index as input and returns the
+   number of steps back to the start word index (which will have -1).
+
+   For example, if parents is
+
+	[0[ [1] [2] [3] [4] [5] [6] [7]
+	-1  -1   1   2   1   4   5   4
+
+   then numSteps(parents, 6) returns 3 because
+
+	parents[6] == 5
+	parents[5] == 4
+	parents[4] == 1
+	parents[1] == -1
+
+   so it takes 3 steps, 5, 4, 1, to get to a -1.
+
+   Add a message to solve that tells you how far the target is from
+   the start (when you have found the path).
+
+
+11. Add a static method numDifferent that tells you the number of
+    letters that are different in two words.  For example,
+
+	numDifferent("snow", "slot") == 2
+
+    Test it.
+
+
+12. Add a class IndexComparator (INSIDE the WordStep class!) that
+    implements Comparator<Integer>.
+
+    a. Its constructor IndexComparator(parents, target) should take
+       the parents array and the target word as arguments and store
+       them inside IndexComparator.
+
+    b. The method sumNums(index) returns the number of steps from
+       the index to the start index PLUS the number of differences
+       between the word at that index and the target word.
+
+    c. The method compare(index1, index2) (required by the Comparator
+       interface) should return < 0 if sumNums(index1) is smaller than
+       sumNums(index2), = 0 if they have the same value, and > 0
+       otherwise.
+
+
+13. In solve, switch to using a PriorityQueue<Node> using
+    IndexComparator for the Queue.  How many words does it dequeue
+    now?  (Should be 117.)
+
+
+14. Now switch to using your Heap using your Comparator.  It should
+    run the same.  Switch back to PriorityQueue for the next part.
+
+
+13. Unfortunately, you will also notice that the solution for "snow"
+    to "rain" is LONGER than before.  Here is how to fix this.
+
+    a. Implement the remove method in Heap.
+
+    b. When WordStep solve dequeues the current word index and looks
+       at all elements of the dictionary for neighbors, instead of
+       just words with parents[index] == -1, it it should also
+       consider words that have
+
+	numSteps(parents, currentIndex) + 1 < numSteps(parents, index)
+
+       If parents[index] != -1, it should remove it from the queue
+       before adding it to the queue.  (Yes, REMOVE IT and then add it
+       as usual.)
+
+    solve() should now find the same length solution for snow to rain
+    but dequeue far fewer words than the prog06 solve().  (Should be 74.)
+
+    Switch back to Heap and make sure it still works right.
+
+
+
+IN LAB on Wednesday March 6:
+
+
+BST.java will be another implementation of a Java Map.  The Node class
+has data, left, and right.  In a binary search tree, left is less and
+right is greater.
+
+The toString method prints tree sideways.  You have to turn your head
+to the left to get the traditional view.  So for instance, when it
+prints
+
+        n 4
+    l 2
+        c 5
+b 0
+    a 3
+
+it is really the tree
+
+    b
+    0
+a       l
+3       2
+      c   n
+      5   4
+
+
+14. Download BST.java.  Implement the private find method using the
+   notes.  Methods in BST should use RECURSION not iteration.
+
+
+15. Implement the private add method using the notes.  Remember that
+   you need to say Node<K,V> instead of Node so it works generically.
+   Make sure you understand what every line does.  The TA can do some
+   examples on the board.  Now, implement the public put method using
+   add.  What do you do with the value add returns?
+
+   Test the program.  The output should be as in tree-output.txt, only
+   the removes won't happen.
+
+
+16. Delete the first two lines from the public remove method.
+   Implement the private remove method based on the notes.  It will
+   call removeRoot.
+
+
+17. Implement removeRoot.  It will call getMinimum and removeMinimum.
+   The node returned by getMinimum becomes the root.
+
+
+18. Implement getMinimum and removeMinimum.
+
+

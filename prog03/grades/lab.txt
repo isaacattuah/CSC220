@@ -1,0 +1,99 @@
+  public static double averageTime (Fib fib, int n, int ncalls) {
+    // Get the current time in nanoseconds.
+    long start = System.nanoTime();
+
+    // Call fib(n) ncalls times (needs a loop!).
+    for (int i = 0; i < ncalls; i++)
+    {
+      fibn = fib.fib(n);
+    }
+    // Get the current time in nanoseconds.
+    long end = System.nanoTime();
+
+    // Return the average time converted to microseconds averaged over ncalls.
+    return (end - start) / 1000.0 / ncalls;
+  }
+
+  /** Determine the time in microseconds it takes to to calculate the
+      n'th Fibonacci number.  Average over enough calls for a total
+      time of at least one second.
+      @param fib an object that implements the Fib interface
+      @param n the index of the Fibonacci number to calculate
+      @return the time it it takes to compute the n'th Fibonacci number
+  */
+  public static double accurateTime (Fib fib, int n) {
+    // Get the time in microseconds using the time method above.
+    double t = averageTime(fib, n, 1);
+
+    // If the time is (equivalent to) more than a second, return it.
+    	if (t > Math.pow(10,6))
+    	{
+    		return t;
+    	}
+
+
+    // Estimate the number of calls that would add up to one second.
+    // Use   (int)(YOUR EXPESSION)   so you can save it into an int variable.
+    int numcalls = (int)((Math.pow(10,6))/t);
+
+
+    // Get the average time using averageTime above and that many
+    // calls and return it.
+    return averageTime(fib, n, numcalls);
+  }
+
+package prog03;
+
+public class LinearFib implements Fib {
+	
+	public double fib(int n)
+	{
+		double a, b, c;
+		a = 0; b = 1; c= 0;
+		
+		for (int i = 0; i < n ; i++)
+		{
+			
+			c = b;
+			b = a + b;
+			a = c;
+		}
+		return a;
+		
+		
+		
+	}
+	
+	public double O (int n)
+	{
+		return n;
+	}
+
+}
+package prog03;
+
+public class ConstantFib extends LogFib {
+
+	 /** The order O() of the implementation.
+		@param n index
+		@return the function of n inside the O()
+	    */
+	    public double O (int n) {
+	        return 1;
+	    }
+
+	    /** Raise x to the n'th power
+		@param x x
+		@param n n
+		@return x to the n'th power
+	    */
+	    protected double pow (double x, int n) {
+		
+		    return Math.pow(x,n);
+	    }
+	}
+
+		
+		
+Done:  ABCD
+SCORE:  25/25

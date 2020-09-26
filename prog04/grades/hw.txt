@@ -1,0 +1,82 @@
+Attuah		Login: iatt220        			Name: Isaac Attuah
+found(Ann:314, Ann)
+returns true
+found(Ann:314, Bob)
+returns false
+found(null , Ann)
+returns false
+CORRECT
+List is:
+Ann:314 Bob:412 tail=Bob:412
+Adding Ian:625 at position 1
+List is:
+Ann:314 Ian:625 Bob:412 tail=Bob:412
+List is:
+tail=null
+Adding Ann:314 at position 0
+List is:
+Ann:314 tail=Ann:314
+List is:
+Ann:314 Bob:412 tail=Bob:412
+Adding Ian:625 at position 0
+List is:
+Ian:625 Ann:314 Bob:412 tail=Bob:412
+List is:
+Ann:314 Bob:412 tail=Bob:412
+Adding Ian:625 at position 2
+List is:
+Ann:314 Bob:412 Ian:625 tail=Ian:625
+CORRECT
+List is:
+Ann:314 Bob:412 tail=Bob:412
+Finding Abe
+find(Abe) returns Ann:314
+List is:
+Ann:314 Bob:412 tail=Bob:412
+Finding Ann
+find(Ann) returns Ann:314
+List is:
+Ann:314 Bob:412 tail=Bob:412
+Finding Bab
+find(Bab) returns Bob:412
+List is:
+Ann:314 Bob:412 tail=Bob:412
+Finding Bob
+find(Bob) returns Bob:412
+List is:
+Ann:314 Bob:412 tail=Bob:412
+Finding Eve
+find(Eve) returns null
+CORRECT
+list is:
+Ann:314 Bob:412 Ian:625 tail=Ian:625
+Removing Bob
+list is:
+Ann:314 Ian:625 tail=Ian:625
+list is:
+Ann:314 Bob:412 Ian:625 tail=Ian:625
+Removing Vic
+list is:
+Ann:314 Bob:412 Ian:625 tail=Ian:625
+list is:
+Ann:314 Bob:412 Ian:625 tail=Ian:625
+Removing Ann
+list is:
+Bob:412 Ian:625 tail=Ian:625
+list is:
+Ann:314 Bob:412 Ian:625 tail=Ian:625
+Removing Ian
+list is:
+Ann:314 Bob:412 tail=Bob:412
+list is:
+Ann:314 tail=Ann:314
+Removing Ann
+list is:
+tail=null
+list is:
+tail=null
+Removing Ann
+list is:
+tail=null
+CORRECT
+SCORE: 70/70
