@@ -1,0 +1,6 @@
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+Timing Jumble on dict using DLLTree.
+Should be about 5 seconds.
+4.475u 0.341s 0:01.87 257.2%	0+0k 0+0io 0pf+0w
+SCORE 20/20

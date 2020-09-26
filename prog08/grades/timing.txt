@@ -1,0 +1,10 @@
+ArrayBasedPD    8.20		1285.556186	
+SortedPD		1.73		271.2210002	
+SortedDLLPD		9.06		1420.382811	
+BST		    57.46
+TreeMap		2.15
+DLLTree     0.93
+
+missing step 9
+
+SCORE:  45/50

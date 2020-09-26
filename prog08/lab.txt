@@ -1,0 +1,112 @@
+1. Create package prog08 and put my Jumble.java into it.  Look at the
+   definition of the sort method.  When you run the program, it will
+   show you the sorted version for every 1000th word.
+
+
+2. Now put each word into the map (using the put method).  For a
+   Jumble lookup dictionary, what is the key?  What is the value?
+
+
+3. Now write the code to solve a Jumble.  What is the key?  Use the
+   get method of map to get the unscrambled word associated with that
+   key.  Test your Jumble program using "words".  I have provided some
+   Jumble puzzle images.
+
+
+4. Can your program unscramble "zagboe" in jumble2.png?  Try the
+   bigger dictionary "dict".
+
+
+5. Download PDMap.java into prog08.  See where in Jumble.java I have
+   initialized map to a TreeMap<String,String>.  Switch to a PDMap
+   initialized off a new ArrayBasedPD.
+
+   Put a copy of lab.txt in your prog08 source folder.  Using the wall
+   clock or the timer on your phone, measure the running time it takes
+   PDMap(ArrayBasedPD) to read in words.  words has 38617 entries and
+   dict has 483523 entries.  Using a calculator, estimate the time it
+   would take to read in dict.  Do the same for SortedPD and
+   SortedDLLPD.  Enter your answers below.
+
+   DON'T measure the actual time for dict in lab!  (You will see why!)
+
+			   words		dict est.	 dict
+
+ArrayBasedPD    8.20		1285.556186	
+
+SortedPD		1.73		271.2210002	
+
+SortedDLLPD		9.06		1420.382811	
+
+
+6. Now switch to BST<String,String>.  How long does it take to read in
+   dict?  Is it as fast as TreeMap<String,String>?  Enter the times below.
+
+			dict
+BST		    57.46
+
+TreeMap		2.15
+
+DLLTree     0.93
+
+
+7. Download DLLTree.java into prog08.  Copy your solution to find, add,
+   put, (public) remove, removeRoot, getMinimum, and removeMinimum
+   from prog07/BST.java to DLLTree.java.  Test.  I called the root of
+   the entire tree "theRoot" so you will have to make a couple of
+   changes.
+
+   (I will (re)grade these parts of DLLTree, so you can still get some
+   points even if you didn't finish BST.)
+
+
+8. Implement addDLL.  Don't forget the cases that set head or tail.
+
+   In add, if you change root.left, check to see if root.left.next is
+   null.  If so, it is new and needs to be inserted into the DLL.
+   Call addDLL to insert it just to the left of root.
+
+   In add, if you change root.right, check to see if root.right.previous is
+   null.  If so, it is new and needs to be inserted into the DLL.
+   Call addDLL to insert it just to the right of root.
+
+   In put, if theRoot.previous is null, then update head.  Similarly
+   if theRoot.next is null.
+
+   Test.  The lists should print out correctly.
+
+
+HOMEWORK
+
+9. Try running one of the O(n) Map implementations on dict.  Enter its
+   running time above next to your prediction.
+
+
+10. In add, increment root.size before returning root.
+
+    If the size of the left or right subtree is more than root.size * 2/3,
+    return the result of calling rebalance for the tree rooted at
+    root.  What are the two arguments?  (Hint: the first one isn't
+    root.  Read the notes.)
+
+
+10. In rebalance and rebalanceLeft, if size==1, just set the left and
+    right of head to null and its size to 1 and return it.
+
+    Otherwise follow the notes.
+
+    In rebalance, set root.size using the sizes of root.left and
+    root.right before returning.
+
+    In rebalanceLeft, set left.size and root.size before returning.
+
+    Test including a test with Jumble.  Fill in running times above.
+
+
+11. Implement removeDLL and call it at the top of removeRoot.
+
+    Before return in the private remove, decrement root.size.
+    Call rebalance under the same conditions as in add.
+
+    Test.
+
