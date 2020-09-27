@@ -1,0 +1,5 @@
+Attuah		Login: iatt220        			Name: Isaac Attuah
+javac prog09/ExternalSort.java
+java prog09/ExternalSort
+SCORE: 15/15
+

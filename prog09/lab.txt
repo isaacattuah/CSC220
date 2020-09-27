@@ -1,0 +1,31 @@
+
+]0. Create package prog09.  Download Sorter.java, SortTest.java, and
+   ExternalSort.java.
+
+1. Implement isSorted.  Use compareTo on every pair of adjacent items.
+
+2. Implement sameContents using HashMap.
+
+3. Finish implementing InsertionSort and test.
+
+4. Ditto HeapSort.  (Uncomment line in tests method.)
+
+5. Ditto QuickSort.
+
+HOMEWORK
+
+6. Ditto MergeSort.
+
+7. In main, call tests with powers of 10 from 10,000 to 10,000,000.
+   Make sure your Sorter implementations have the correct O().
+
+8. Write the merge method in ExternalSort.  Test on number.txt and
+   then make your own file with different lengths to make sure you have
+   it right.
+
+
+
+
+
+
+

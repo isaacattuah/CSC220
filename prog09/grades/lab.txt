@@ -1,0 +1,8 @@
+Attuah		Login: iatt220        			Name: Isaac Attuah
+Testing isSorted, sameContents, and insertionSort from LAB work
+prog09.InsertionSort@77f03bb1 on array of length 10000
+142588.731 microseconds
+prog09.InsertionSort@77f03bb1 on array of length 100000
+1.5150676382E7 microseconds
+SCORE: 40/40
+

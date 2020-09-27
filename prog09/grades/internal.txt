@@ -1,0 +1,19 @@
+Attuah		Login: iatt220        			Name: Isaac Attuah
+Testing heapSort, quickSort, and mergeSort
+prog09.HeapSort@77f03bb1 on array of length 1000000
+1181340.036 microseconds
+prog09.HeapSort@77f03bb1 on array of length 10000000
+2.5742276725E7 microseconds
+1.86777794276233 ratio/oratio
+prog09.QuickSort@2aafb23c on array of length 1000000
+497757.854 microseconds
+prog09.QuickSort@2aafb23c on array of length 10000000
+6694124.678 microseconds
+1.152733423784696 ratio/oratio
+prog09.MergeSort@3ab39c39 on array of length 1000000
+575968.79 microseconds
+prog09.MergeSort@3ab39c39 on array of length 10000000
+6670608.623 microseconds
+0.9927038814030181 ratio/oratio
+SCORE: 45/45
+
