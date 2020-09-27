@@ -1,0 +1,275 @@
+QUESTION: can we create a map that is as fast as a hash table but
+ORDERED, so Milenkovic is near to Milenkovich?
+
+ANSWER: YES, if the keys are STRINGS.  When are keys not strings?  You
+have two keys at UM, your C-number and your 5-number.  Both of them
+fit in an int.  The following will not work for int keys.  But who
+cares?  There isn't any good reason to want to find students who
+C-number is close to yours.
+
+The data structure is called a TRIE, which is short for, reTRIEval,
+but it is pronounced "TRY" to distinguish it from TREE.  Specifically,
+a RADIX TRIE.
+
+Let's put("bobcat", 1) and put("catdog", 2):
+
+bobcat bobcat 1
+catdog catdog 2
+
+So far it looks like a sorted list with redundant keys.  Isn't this
+going to have O(log n) get and O(n) put?  Both worse than hash table?
+
+Let's put("bobby", 3)
+
+bob null null [pointer to {by,cat} sublist]
+   by bobby 3
+   cat bobcat 1
+catdog catdog 2
+
+What happened?  Since bobby and bobcat both start with "bob", we will
+have a single entry in the top level list for "bob" and a sublist with
+entries "by" and "cat".  This sublist is stored is stored in the bob
+entry.
+
+How do we do a get?  Let's get("bobcat"):
+
+bob null null
+   by bobby 3
+   cat bobcat 1
+catdog catdog 2
+
+We call a recursive find, with find(key, iKey, list), where
+key="bobcat", iKey=0, and list is the top level list.  If there is no
+entry starting with key.charAt(iKey)='b', then return null.
+
+Otherwise "bob" matches the first character.  Increment iKey and set
+iSub=1.  Keep incrementing as long as it matches and both stay in
+range.
+
+In this case, we stop because iSub=3 is out of range, but iKey=3 is
+not. That tells us that we have matched the entire (sub)key "bob" and
+we should recurse on bob's sublist
+
+by bobby 3
+cat bobcat 1
+
+The recursion is find(key, iKey, entry.list), where entry is bob's entry
+and iKey now equals 3.
+
+Once again, the first character of "cat" matches key.charAt(iKey)='c',
+so we do the same thing: increment iKey, set iSub=1, and keep
+matching.  This time both iKey=6 and iSub=3 go out of range at the
+same time.  This tells us that we have the correct Entry with
+key="bobcat" and value=1, and we return it.
+
+Each Entry has a key and value, as usual, plus a subkey called sub and
+a sublist called list.
+
+The Entry for "bob" has sub="bob" but key=null because there really is
+no entry for "bob".  It's just there because "bobby" and "bobcat"
+share "bob" in common.  That's why you see "bob null null".  If you
+tried to look up "bob", you would get this entry, but you would know
+that "bob" is not really there because the key is null.
+
+
+RUNNING TIME?
+
+There can be at most one entry in each list for each letter of the
+alphabet.  If we had two entries with the same first letter, they
+would share a prefix, and we would create a sublist.  There are only
+26 letters in the alphabet.  Even if we allow upper case and other
+characters, it still is a constant.
+
+So looking for a first letter in a list is O(1) even if we use linear
+search.  If we want it to be really fast, we can use an array of
+length 26 regardless, putting null for unused letters.  In that case
+finding a letter is truly unit time.  That might waste space, but we
+could just do it for the higher levels in the tree.
+
+Still, how can we say it is as fast as a hash table?  It's got
+multiple levels!
+
+The thing is that to hash a key takes O(L) for L=key.length().
+
+Searching a single list for a starting letter in a Trie takes O(1).
+Otherwise, each time we compare two characters, we increment iKey.
+Each time you go into a sublist, we increment iKey by at least 1.  So
+the number of lists we search and the number of comparisons we make is
+O(L).  It really does have the "same" O() as hashing!
+
+
+EXTERNAL TRIE
+
+If we keep each list in a disk block, then we can look up a word in
+O(L) disk seeks.
+
+Here is where we really stretch the "same" O().  Hashing a string
+takes L NANOseconds.  Looking up in an external trie takes L
+MILLIseconds.  What's a factor of a million between friends?
+
+More importantly, if we are looking up a lot of strings with the same
+prefix, then we don't have to start over, so it really is close to
+O(1).  When would we do that?
+
+http://www.cs.miami.edu/~vjm/csc220/prog11/lab.txt
+http://www.cs.miami.edu/~vjm/csc220/prog11/output.txt
+
+URLs on the same web page have long common prefixes.
+
+
+IMPLEMENTING toString
+
+How to "print out" (create a String from) a Trie?
+
+Call a recursive toString(list, indent) with list the top level list
+and indent=0.
+
+For each entry in the list, "print out" its information indented by indent:
+entry.sub, entry.key, entry.value.  If entry.list has elements, recurse.
+What value of indent for the recursive call?  (Look at my formatting.)
+
+
+IMPLEMENTING put
+
+put(key, value) makes a recursive call to put(key, iKey, value, list)
+for iKey=0 and list the top level list.  Let's put("bobby", 2) when
+list is
+
+bobcat bobcat 1
+catdog catdog 2
+
+This time, the entry starting with 'b' is bobcat, and we stop
+incrementing iKey and iSub at 3 because key.charAt(3)='b' does not
+match entry.sub.charAt(3)='c'.
+
+We create a new Entry with sub="cat", key="bobcat", and value=1.
+Set the bobcat entry's sub from "bobcat" to "bob" and set its key and
+value to null.
+Add the new Entry to the original entry's list:
+
+bob null null
+   cat bobcat 1
+catdog catdog 2
+
+Now recurse put(key, iKey, value, entry.list).
+
+This time the list only has "cat" and no string starting with
+key.charAt(3)='b'.  So we just insert a new entry alphabetically:
+
+bob null null
+   by bobby 3
+   cat bobcat 1
+catdog catdog 2
+
+If we put("bobcalf", 4), then iSub on "bob" reaches 3, so we just
+recurse on bob's sublist without modifying it.  The recursion does the
+equivalent thing to cat that bobby did to bobcat above:
+
+bob null null
+   by bobby 3
+   ca
+     lf bobcalf 4
+     t bobcat 1
+catdog catdog 2
+
+Suppose we put("bob", 5)?  Both iKey and iSub reach the ends of their
+strings at the same time.  Since entry.key==null, that tells us that
+bob is a placeholder, so we should set its key too:
+
+bob bob 5
+   by bobby 3
+   ca
+     lf bobcalf 4
+     t bobcat 1
+catdog catdog 2
+
+A second put on "bob" would only change its value.
+
+Finally, let's put("cat", 6).  iKey "runs out" before iSub, so we
+create the subentry and sublist as before
+
+bob bob 5
+   by bobby 3
+   ca
+     lf bobcalf 4
+     t bobcat 1
+cat null null
+   dog catdog 2
+
+But we don't recurse.  We just set cat's key and value:
+
+bob bob 5
+   by bobby 3
+   ca
+     lf bobcalf 4
+     t bobcat 1
+cat cat 6
+   dog catdog 2
+
+
+
+IMPLEMENTING EntryIterator
+
+Implementing an Iterator is a bit tricky because it is like stopping
+the recursive toString at each step.
+
+The EntryIterator has a Stack of Iterator of Entry of V.  In the
+constructor, we push the iterator of the top level list.
+
+hasNext() checks that the Iterator at the top of the stack has a next.
+If not, it keeps popping until it does.  When does it return false?
+
+next() just gets the next of the Iterator at the top of the stack.  If
+the entry has a non-empty list, it pushes its iterator.
+
+bob bob 5
+   by bobby 3
+   ca null null
+     lf bobcalf 4
+     t bobcat 1
+cat cat 6
+   dog catdog 2
+
+STACK:  bob
+
+hasNext() is true.
+next() moves forward to cat, pushes by, and returns bob.
+
+STACK:  cat by
+
+hasNext() is true.
+next() moves forward to ca, and returns by (bobby).
+
+STACK: cat ca
+
+hasNext() is true.
+next() moves forward to null, push lf, and returns ca.
+
+STACK:  cat null lf
+
+hasNext() is true.
+next() moves forward to t, and returns lf (bobcalf).
+
+STACK:  cat null t
+
+hasNext() is true.
+next() moves forward to null, and returns t (bobcat).
+
+STACK: cat null null
+
+hasNext() pops twice and returns true
+
+STACK: cat
+
+next() moves forward to null, pushes dog, and returns cat
+
+STACK: null dog
+
+hasNext() is true.
+next() moves forward to null and returns dog (catdog).
+
+STACK: null null
+
+hasNext() pops twice and returns false.
+
+

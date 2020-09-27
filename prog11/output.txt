@@ -1,0 +1,179 @@
+bob null null
+   by bobby 0
+   ca null null
+     lf bobcalf 1
+     t bobcat 2
+catdog catdog 3
+
+Select 0: toString
+Select 1: containsKey
+Select 2: get
+Select 3: put
+Select 4: size
+Select 5: entrySet
+Select 6: remove
+Select 7: quit
+0
+bob null null
+   by bobby 0
+   ca null null
+     lf bobcalf 1
+     t bobcat 2
+catdog catdog 3
+
+Select 0: toString
+Select 1: containsKey
+Select 2: get
+Select 3: put
+Select 4: size
+Select 5: entrySet
+Select 6: remove
+Select 7: quit
+1
+key:  
+bob
+containsKey(bob) = false
+Select 0: toString
+Select 1: containsKey
+Select 2: get
+Select 3: put
+Select 4: size
+Select 5: entrySet
+Select 6: remove
+Select 7: quit
+2
+key:  
+bobcalf
+get(bobcalf) = 1
+Select 0: toString
+Select 1: containsKey
+Select 2: get
+Select 3: put
+Select 4: size
+Select 5: entrySet
+Select 6: remove
+Select 7: quit
+3
+key:  
+cat
+value:  
+6
+put(cat,6) = null
+Select 0: toString
+Select 1: containsKey
+Select 2: get
+Select 3: put
+Select 4: size
+Select 5: entrySet
+Select 6: remove
+Select 7: quit
+0
+bob null null
+   by bobby 0
+   ca null null
+     lf bobcalf 1
+     t bobcat 2
+cat cat 6
+   dog catdog 3
+
+Select 0: toString
+Select 1: containsKey
+Select 2: get
+Select 3: put
+Select 4: size
+Select 5: entrySet
+Select 6: remove
+Select 7: quit
+3
+key:  
+bobcut
+value:  
+5
+put(bobcut,5) = null
+Select 0: toString
+Select 1: containsKey
+Select 2: get
+Select 3: put
+Select 4: size
+Select 5: entrySet
+Select 6: remove
+Select 7: quit
+0
+bob null null
+   by bobby 0
+   c null null
+    a null null
+     lf bobcalf 1
+     t bobcat 2
+    ut bobcut 5
+cat cat 6
+   dog catdog 3
+
+Select 0: toString
+Select 1: containsKey
+Select 2: get
+Select 3: put
+Select 4: size
+Select 5: entrySet
+Select 6: remove
+Select 7: quit
+3
+key:  
+bobcut
+value:  
+7
+put(bobcut,7) = 5
+Select 0: toString
+Select 1: containsKey
+Select 2: get
+Select 3: put
+Select 4: size
+Select 5: entrySet
+Select 6: remove
+Select 7: quit
+0
+bob null null
+   by bobby 0
+   c null null
+    a null null
+     lf bobcalf 1
+     t bobcat 2
+    ut bobcut 7
+cat cat 6
+   dog catdog 3
+
+Select 0: toString
+Select 1: containsKey
+Select 2: get
+Select 3: put
+Select 4: size
+Select 5: entrySet
+Select 6: remove
+Select 7: quit
+4
+size() = 6
+Select 0: toString
+Select 1: containsKey
+Select 2: get
+Select 3: put
+Select 4: size
+Select 5: entrySet
+Select 6: remove
+Select 7: quit
+5
+bobby 0
+bobcalf 1
+bobcat 2
+bobcut 7
+cat 6
+catdog 3
+
+Select 0: toString
+Select 1: containsKey
+Select 2: get
+Select 3: put
+Select 4: size
+Select 5: entrySet
+Select 6: remove
+Select 7: quit
+7
