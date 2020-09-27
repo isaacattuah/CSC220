@@ -15,5 +15,5 @@ Algorithms and exercises from CSC220 Spring 2018 class by Dr. Victor Milenkovic
 11. [Prog11](https://www.cs.miami.edu/home/vjm/csc220/prog11/)
 12. [Prog12](https://www.cs.miami.edu/home/vjm/csc220/prog12/)
 
-## Website
+## Resoucre Website
 [Course Page](https://www.cs.miami.edu/home/vjm/csc220/)
