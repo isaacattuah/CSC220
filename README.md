@@ -1,4 +1,4 @@
-# 🎓 CSC220: Data Structures & Algorithms
+# 🎓 CSC220: Data Structures & Algorithms Learning Guide
 
 > ⚠️ **IMPORTANT DISCLAIMER**: This repository contains historical implementations from a Spring 2018 course offering. Course requirements, project specifications, and evaluation criteria may have changed significantly since then. This content is meant for learning purposes only - **do not copy or submit as your own work**. Always refer to your current course syllabus and instructor's requirements.
 
