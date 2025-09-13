@@ -4,7 +4,7 @@
 
 Welcome to CSC220! This repository contains implementations and explanations of fundamental data structures and algorithms, culminating in building a mini search engine. Each project builds upon previous concepts, taking you from basic array operations to implementing a functional search engine.
 
-## � Course History
+## 🏰 Course History
 This repository contains algorithms and exercises from CSC220 Spring 2018 class taught by Dr. Victor Milenkovic at the University of Miami. The projects are based on his original course materials and have been implemented as learning resources.
 
 ### Original Source Projects
@@ -21,7 +21,7 @@ This repository contains algorithms and exercises from CSC220 Spring 2018 class 
 - [Prog11](https://www.cs.miami.edu/home/vjm/csc220/prog11/)
 - [Prog12](https://www.cs.miami.edu/home/vjm/csc220/prog12/)
 
-## �📚 Course Overview
+## 📚 Course Overview
 
 This course is structured as a progressive journey through increasingly complex data structures and their applications:
 
